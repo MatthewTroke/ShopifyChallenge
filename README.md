@@ -1,4 +1,4 @@
-Welcome to your Stitch Labs frontend coding assessment! You have 24 hours to complete the assessment. Please follow the steps below, get as much done as you can, ask questions when needed, and be as creative as possible.
+Welcome to your frontend coding assessment! You have 24 hours to complete the assessment. Please follow the steps below, get as much done as you can, ask questions when needed, and be as creative as possible.
 
 
 ## Getting Started:
@@ -12,7 +12,6 @@ Welcome to your Stitch Labs frontend coding assessment! You have 24 hours to com
 
 From the credentials you received when creating your private app create a .env file in the root of the project with the following
 
-
     SHOPIFY_STORE_NAME=
     SHOPIFY_API_KEY=
     SHOPIFY_PASSWORD=
@@ -20,21 +19,21 @@ From the credentials you received when creating your private app create a .env f
 ### Running the express server
 - Ensure you have ran `npm install` in this repository
 - To start the express server run `npm run start`
-- Verify you're credentials are correct by visiting [http://localhost:3000](http://localhost:3000), you should see a JSON response of the products you have added. If you cannot get this to work please send us an email.
+- Verify your credentials are correct by visiting [http://localhost:3000](http://localhost:3000), you should see a JSON response of the products you have added. If you cannot get this to work please send us an email.
 
 ### Terminology
-**Product vs Variant:** A parent on most channels represents top level information like a description or name. 
+**Product vs Variant:** A product on most channels represents top level information like a description or name. 
 
 **Example:**
 
-You have one product with product name: Game of
-Thrones T-Shirt.
+You have one product with product name: Game of Thrones T-Shirt.
 
 A variant under this parent may have up to three “attributes” eg Size, Color, House. 
 
 An example of this products variants would be: 
 
-M / Green / Targaryen, L/Black/Lannister. 
+- Game of Thrones T-Shirt M / Green / Targaryen
+- Game of Thrones T-Shirt L / Black/ Lannister. 
 
 The SKU, Price, and Quantity are tracked at a variant level (in most cases).
 
@@ -46,10 +45,9 @@ If you sell peanut butter it’s SKU could be *1234* or *PBNOJ*. It really doesn
 
 
 ## Instructions
-You will use AngularJS (or equivalent JS framework) to write a mini single­ page application, to work with Shopify’s product catalogs.
+You will use AngularJS (or equivalent JS framework) to write a mini single­ page application, to work with Shopify’s product catalogs. Feel free to use a starter kit but remove any unused boilerplate code. 
 
-In general, the layout should look like the following:
-
+Create a fork of this repository, your single page application should live inside the existing client folder.
 
 ### Making API calls with the express server
 
@@ -64,17 +62,17 @@ Example product list call
 - The url for the products list call from the documentation is `/admin/products.json` the `/admin/` part of the url is already added for you in the node server so you **ONLY** need to specify `products.json`
 - `http://localhost:3000/shopify?path=products.json`
 
-
 ### Must Haves
-- The product detail should show detailed product information such as stock and variants
-- A filter bar to narrow down the list of items returned from the API such as:
+- A product list and detail view, this can be a 1/3 list view with a 2/3 nested product detail view or seperated views.
+- The product detail view should show detailed product information such as stock, sku, price and variants
+- A filter bar to narrow down the product list returned from the Shopify API (not a client side filter) such as:
  - Title search
  - Selecting a start/end date range for product creation
-
 - They ability to create, update and delete products
 
 ### Nice to haves (optional)
-- Display the list of variants in a table on the product detail page
+- gulp / webpack
+- css compilier
 - Add in a data visualization component
 - Inline add / edit
 - Unit tests
