@@ -18,6 +18,10 @@ class Shopify {
   getUrl(endpoint) {
     let url = `https://${this.apiKey}:${this.password}@${this.storeName}.myshopify.com/admin`;
 
+    if (!endpoint) {
+      throw new Error('no path was specified');
+    }
+
     if (!endpoint.startsWith('/')) {
       url += '/'
     }
@@ -47,8 +51,6 @@ class Shopify {
 
       Object.assign(options.qs, qs);
     }
-
-    console.log(options);
 
     return this.limiter.schedule(rp, options);
   }

@@ -1,16 +1,16 @@
-Welcome to your frontend coding assessment! You have 24 hours to complete the assessment. Please follow the steps below, get as much done as you can, ask questions when needed, and be as creative as possible.
+Welcome to your frontend coding assessment! You have 24 hours to complete the assessment. Follow the steps below, get as much done as you can, ask questions when needed, and be as creative as possible.
 
 
 ## Getting Started:
 
 - Create a free test account on Shopify. [https://www.shopify.com](https://www.shopify.com)
 
-- Create a private app to connect your store .[https://docs.shopify.com/api/authentication/creating­a­private­app#setup](https://docs.shopify.com/api/authentication/creating­a­private­app#setup)
+- Create a private app to connect your store .[https://help.shopify.com/en/manual/apps/private-apps](https://help.shopify.com/en/manual/apps/private-apps). Enable all read and write permissions.
 
 - Create at least 3 products with variants in each product
 
 
-From the credentials you received when creating your private app create a .env file in the root of the project with the following
+Create a .env file in the root of the project with the following using your credentials from the private app.
 
     SHOPIFY_STORE_NAME=
     SHOPIFY_API_KEY=
@@ -22,7 +22,7 @@ From the credentials you received when creating your private app create a .env f
 - Verify your credentials are correct by visiting [http://localhost:3000](http://localhost:3000), you should see a JSON response of the products you have added. If you cannot get this to work please send us an email.
 
 ### Terminology
-**Product vs Variant:** A product on most channels represents top level information like a description or name. 
+**Product vs Variant:** A product on represents top level information like a description or name. 
 
 **Example:**
 
@@ -30,22 +30,22 @@ You have one product with product name: Game of Thrones T-Shirt.
 
 A variant under this parent may have up to three “attributes” eg Size, Color, House. 
 
-An example of this products variants would be: 
+An example of the products variants would be: 
 
 - Game of Thrones T-Shirt M / Green / Targaryen
 - Game of Thrones T-Shirt L / Black/ Lannister. 
 
-The SKU, Price, and Quantity are tracked at a variant level (in most cases).
+SKU, Price, and Quantity are tracked at a variant level.
 
-**SKU:** Also known as stock keeping unit. This is a free form field to identify an item that you sell.
+**SKU:** Stock keeping unit. This is a free form field to identify an item that you sell.
 
-**Example: **
+**Example: *
 
-If you sell peanut butter it’s SKU could be *1234* or *PBNOJ*. It really doesn’t matter as long as they are unique for each listing that you sell. This is the field that you will use to link up listings across other sales channels.
+If you sell peanut butter the SKU could be *1234* or *PBNOJ*. It really doesn’t matter as long as the SKU's are unique for each listing that you sell. This is the field that you will use to link up listings across other sales channels.
 
 
 ## Instructions
-You will use AngularJS (or equivalent JS framework) to write a mini single­ page application, to work with Shopify’s product catalogs. Feel free to use a starter kit but remove any unused boilerplate code. 
+You will use AngularJS (or equivalent JS framework) to write a mini single page application, to work with Shopify's product catalogs. Feel free to use a starter kit but remove any unused boilerplate code. 
 
 Create a fork of this repository, your single page application should live inside the existing client folder.
 
@@ -71,10 +71,8 @@ Example product list call
 - They ability to create, update and delete products
 
 ### Nice to haves (optional)
-- gulp / webpack
-- css compilier
+- Orders Page and Detail View
 - Add in a data visualization component
-- Inline add / edit
 - Unit tests
 
 ### When building your application think about the following:
