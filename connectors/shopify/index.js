@@ -43,8 +43,12 @@ class Shopify {
     }
 
     if (qs) {
+      delete qs.path;
+
       Object.assign(options.qs, qs);
     }
+
+    console.log(options);
 
     return this.limiter.schedule(rp, options);
   }

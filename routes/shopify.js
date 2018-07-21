@@ -6,7 +6,7 @@ const router  = express.Router();
 router.get('/', function(req, res, next) {
   const { path } = req.query;
 
-  return new Shopify().get(path)
+  return new Shopify().get(path, req.query)
     .then(data => res.status(data.statusCode).json(data.body))
     .catch(err => res.status(err.statusCode).json(err))
 });
