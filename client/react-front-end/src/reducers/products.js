@@ -1,5 +1,6 @@
 let initialState = {
-  products: null
+  products: null,
+  filteredProducts: null
 };
 
 export default function ProductsReducer(state = initialState, action) {
@@ -10,12 +11,12 @@ export default function ProductsReducer(state = initialState, action) {
       return { ...state, products: action.payload };
     case "GET_PRODUCT_ERROR":
       return { ...state, products: action.payload };
-    case "GET_PRODUCT_PENDING":
+    case "GET_PRODUCT_WITH_FILTER_PENDING":
       return state;
-    case "GET_PRODUCT_SUCCESS":
-      return { ...state, products: [...state.products, action.payload] };
-    case "GET_PRODUCT_ERROR":
-      return { ...state, products: action.payload };
+    case "GET_PRODUCT_WITH_FILTER_SUCCESS":
+      return { ...state, filteredProducts: action.payload };
+    case "GET_PRODUCT_WITH_FILTER_ERROR":
+      return { ...state, filteredProducts: action.payload };
     default:
       return state;
   }
